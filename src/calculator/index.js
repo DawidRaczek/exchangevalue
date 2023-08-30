@@ -5,7 +5,7 @@ window.addEventListener("load", function () {
 
 function calculate() {
     // Pobierz wartości z pól formularza
-    let amount = parseFloat(document.getElementById("amount").value);
+    let amount = parseFloat(document.getElementById("amount").value) || 0;
     let fromCurrency = document.getElementById("fromCurrency").value;
     let toCurrency = document.getElementById("toCurrency").value;
 
