@@ -8,6 +8,28 @@
 
 </head>
 <body>
+    <h1>Kalkulator Wymiany Walut</h1>
+    
+    <label for="amount">Kwota:</label>
+    <input type="number" id="amount" step="0.01" value="1">
+
+    <label for="fromCurrency">Z:</label>
+    <select id="fromCurrency">
+        <option value="PLN">PLN</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+    </select>
+
+    <label for="toCurrency">Na:</label>
+    <select id="toCurrency">
+        <option value="PLN">PLN</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+    </select>
+
+    <button onclick="calculate()">Przelicz</button>
+
+    <p>Wynik: <span id="result">0.00</span></p>
 
     <script src="index.js"></script>
 </body>
