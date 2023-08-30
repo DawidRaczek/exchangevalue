@@ -19,6 +19,17 @@ function calculate() {
             .catch(error => {
                 console.error('Błąd przy pobieraniu kursu waluty docelowej:', error);
             });
+    } else if (toCurrency === "PLN") {
+        fetch(`http://api.nbp.pl/api/exchangerates/rates/A/${fromCurrency}/`)
+        .then(response => response.json())
+        .then(data => {
+            let toRate = data.rates[0].mid;
+            let result = amount * toRate;
+            document.getElementById("result").innerHTML = result.toFixed(2) + " " + toCurrency;
+        })
+        .catch(error => {
+            console.error("Błąd przy pobieraniu kursu waluty docelowej:", error);
+        })
     } else {
         // Jeśli waluta źródłowa to inna niż PLN
         fetch(`http://api.nbp.pl/api/exchangerates/rates/A/${fromCurrency}/`)
