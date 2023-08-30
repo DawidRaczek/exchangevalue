@@ -18,13 +18,15 @@
         <div class="wraper">
                 <h1 class="title1">CALCULTOR</h1>
                 <label class= "kwota" for="amount">AMOUNT:</label>
-        <input type="number" id="amount" step="0.01" value="1">
+        <input class= "amount" type="number" id="amount" step="0.01" value="1">
 
         <label for="fromCurrency">FROM:</label>
         <select class= "select" id="fromCurrency">
-            <option value="PLN">PLN</option>
             <option value="USD">USD</option>
+            <option value="PLN">PLN</option>
             <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="JPY">JPY</option>
         </select>
         
         <label for="toCurrency">TO:</label>
@@ -32,11 +34,12 @@
             <option value="PLN">PLN</option>
             <option value="USD">USD</option>
             <option value="EUR">EUR</option>
+            <option value="JPY">JPY</option>
         </select>
         
         <button class="przycisk" onclick="calculate()">CALCULATE</button>
         
-        <p class="wynik">RESULT: <span id="result">0.00</span></p>
+        <p class= "wynik">RESULT: <span id="result">0.00</span></p>
 
     </div>
 </div>

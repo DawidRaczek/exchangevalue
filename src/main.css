@@ -1,20 +1,20 @@
 @keyframes wave{
     0%{
-      background-position-x: 0px; 
+        background-position-x: 0px; 
     }
     100%{
-      background-position-x: 1000px; 
+        background-position-x: 1000px; 
     }
-  }
-  @keyframes wave2{
+}
+@keyframes wave2{
     0%{
-      background-position-x: 0px; 
+        background-position-x: 0px; 
     }
     100%{
-      background-position-x: -1000px; 
+        background-position-x: -1000px; 
     }
-  }
-  body {
+}
+body {
     margin: 0;
 }
 .app {
@@ -28,6 +28,11 @@
     height: 100vh;
     background: #3586ff;
     overflow: hidden;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 section .air{
     position: absolute;
@@ -74,20 +79,39 @@ section .air.air4{
     position: relative;
     border-radius: 25%;
     padding: 2rem;
-    font-family: 'Lucida Sans';
+    font-family: Verdana;
     font-weight: bold;
     justify-content: space-between;
 }
+.wraper > * {
+    margin: 5px;
+}
 .wynik{
-    border-color: antiquewhite;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
 }
 .przycisk{
     border-radius: 10px;
-    background-color: #3586ff;
     font-weight: bold;
+    transition-duration: 0.3s;
+}
+.przycisk:hover {
+    background-color: #3586ff;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); 
 }
 .select{
     border-radius: 10px;
-    background-color: #3586ff;
     font-weight: bold;
+    transition-duration: 0.3s;
+}
+.select:hover {
+    background-color: #3586ff;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); 
+}
+.amount{
+    border-radius: 5px;
+    text-align: center;
 }
