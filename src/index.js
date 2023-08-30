@@ -1,3 +1,8 @@
+window.addEventListener("load", function () {
+    const wrapper = document.querySelector(".wraper");
+    wrapper.classList.add("show");
+});
+
 function calculate() {
     // Pobierz wartości z pól formularza
     let amount = parseFloat(document.getElementById("amount").value);
