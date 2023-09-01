@@ -69,14 +69,12 @@ const apiKey = "5NZFPQF3BOMA5CS1";
           const volumeValue = Number(lastDayData["5. volume"]);
           const average = volumeValue * ((highValue + lowValue) / 2);   
           
-          dataContainer.innerHTML = "Open: "+ openValue + "<br/>" +
-                                    "High: " + highValue + "<br/>" +
-                                    "Low: " + lowValue + "<br/>" +
-                                    "Close: " + closeValue + "<br/>" +
+          dataContainer.innerHTML = "Open: "+ openValue + "$" + "<br/>" +
+                                    "High: " + highValue + "$" + "<br/>" +
+                                    "Low: " + lowValue + "$" + "<br/>" +
+                                    "Close: " + closeValue + "$" + "<br/>" +
                                     "Volume: " + volumeValue + "<br/>" +
-                                    "Average: " + Math.round(average) + "<br/>" ;
-
-        //   dataContainer.innerHTML = JSON.stringify(lastDayData, null, 2);
+                                    "Average: " + Math.round(average).toLocaleString('en-EN') + "$" + "<br/>";
         })
         .catch((error) => {
           console.error(`Wystąpił błąd: ${error.message}`);
